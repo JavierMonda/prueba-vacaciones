@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `vacaciones` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `vacaciones`;
+CREATE DATABASE  IF NOT EXISTS `oasis` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `oasis`;
 -- MySQL dump 10.15  Distrib 10.0.31-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: vacaciones
@@ -195,7 +195,7 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = '' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`platy`@`localhost`*/ /*!50003 TRIGGER diasVacaciones BEFORE INSERT ON Trabajador FOR EACH ROW
+/*!50003 CREATE*/ /*!50017 DEFINER=`homestead`@`localhost`*/ /*!50003 TRIGGER diasVacaciones BEFORE INSERT ON Trabajador FOR EACH ROW
 BEGIN
     SET NEW.vacaciones = ROUND(DATEDIFF(NEW.fechaFin,NEW.fechaIni) * 0.082,0);
 END */;;
